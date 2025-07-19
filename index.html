@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google-adsense-account" content="ca-pub-7409214823148194">
+  <title>Smart Unit Converter</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="image/images.jpg">
+  <script src="index.js"></script>
+ 
+</head>
+<body>
+  <div class="container">
+    <h1>🌐 Unit Converter</h1>
+    <div class="card">
+      <label for="type">Conversion Type:</label>
+      <select id="type" onchange="populateUnits()">
+        <option value="length">Length</option>
+        <option value="weight">Weight</option>
+        <option value="temperature">Temperature</option>
+        <option value="area">Area</option>
+        <option value="speed">Speed</option>
+        <option value="time">Time</option>
+        <option value="volume">Volume</option>
+      </select>
+
+      <label>From:</label>
+      <select id="from" aria-label="From unit"></select>
+
+      <label>To:</label>
+      <select id="to" aria-label="To unit"></select>
+
+      <label>Value:</label>
+      <input type="number" id="input" placeholder="Enter value" step="any">
+
+      <button onclick="convert()">Convert</button>
+
+      <div id="result">Result will appear here</div>
+    </div>
+  </div>
+
+</body>
+</html>
